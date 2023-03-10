@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - hazem-internship/jx3-new
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.10.0.0.100.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null

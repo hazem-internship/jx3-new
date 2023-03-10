@@ -21,7 +21,8 @@ jxRequirements:
     enabled: false
     schedule: ""
   cluster:
-    chartRepository: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
+    chartKind: pages
+    chartRepository: https://github.com/hazem-internship/gow-new-1.git
     clusterName: kind
     devEnvApprovers:
     - todo
@@ -38,7 +39,7 @@ jxRequirements:
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: 10.0.0.100.nip.io
     kind: ingress
     namespaceSubDomain: -tekton-pipelines.
     tls:
