@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: hazemTa
+    provider: github
+    repository: go-23-2032
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: hazemta-go-23-2032
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/hazemTa/go-23-2032.git
+  org: hazemTa
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: go-23-2032
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/hazemTa/go-23-2032
