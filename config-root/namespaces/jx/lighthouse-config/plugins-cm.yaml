@@ -6,6 +6,10 @@ data:
       repos:
       - hazem-internship/jx3-new
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - hazem-internship/jx3-new
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -50,6 +54,9 @@ data:
       xl: 0
       xxl: 0
     triggers:
+    - repos:
+      - hazem-internship/jx3-new
+      trusted_org: hazem-internship
     - repos:
       - hazem-internship/jx3-new
       trusted_org: hazem-internship
