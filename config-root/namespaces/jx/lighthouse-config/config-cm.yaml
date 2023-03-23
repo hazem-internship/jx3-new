@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        hazem-internship/golang-new: true
         hazem-internship/jx3-new: true
         hazemTa/go-23-2032: true
     plank: {}
@@ -20,6 +21,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        hazem-internship/golang-new: merge
         hazem-internship/jx3-new: merge
         hazemTa/go-23-2032: merge
       queries:
@@ -33,6 +35,7 @@ data:
         - needs-rebase
         repos:
         - hazem-internship/jx3-new
+        - hazem-internship/golang-new
         - hazemTa/go-23-2032
       - labels:
         - updatebot
@@ -44,6 +47,7 @@ data:
         - needs-rebase
         repos:
         - hazem-internship/jx3-new
+        - hazem-internship/golang-new
         - hazemTa/go-23-2032
       target_url: http://lighthouse-jx.10.0.0.100.nip.io/merge/status
 kind: ConfigMap
