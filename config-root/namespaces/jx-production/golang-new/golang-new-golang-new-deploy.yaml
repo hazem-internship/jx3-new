@@ -1,0 +1,61 @@
+# Source: golang-new/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: golang-new-golang-new
+  labels:
+    draft: draft-app
+    chart: "golang-new-0.0.1"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'golang-new'
+    wave.pusher.com/update-on-config-change: 'true'
+  namespace: jx-production
+spec:
+  selector:
+    matchLabels:
+      app: golang-new-golang-new
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: golang-new-golang-new
+    spec:
+      serviceAccountName: golang-new-golang-new
+      containers:
+      - name: golang-new
+        image: "ghcr.io/hazem-internship/golang-new:0.0.1"
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: VERSION
+          value: 0.0.1
+        envFrom: null
+        ports:
+        - name: http
+          containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources:
+          limits:
+            cpu: 400m
+            memory: 256Mi
+          requests:
+            cpu: 200m
+            memory: 128Mi
+      terminationGracePeriodSeconds:
+      imagePullSecrets:
+      - name: "tekton-container-registry-auth"

@@ -1,0 +1,22 @@
+# Source: golang-new/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    meta.helm.sh/release-name: 'golang-new'
+  name: golang-new
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  rules:
+  - http:
+      paths:
+      - pathType: ImplementationSpecific
+        backend:
+          service:
+            name: golang-new
+            port:
+              number: 80
+    host: golang-new-jx-production.10.0.0.100.nip.io
