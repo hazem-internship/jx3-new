@@ -15,6 +15,7 @@ spec:
     providerKind: github
     repositories:
     - name: golang-new
+    - name: things-board
     scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
