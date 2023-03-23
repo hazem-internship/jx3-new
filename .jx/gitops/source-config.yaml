@@ -10,6 +10,12 @@ spec:
     repositories:
     - name: go-23-2032
     scheduler: in-repo
+  - owner: hazem-internship
+    provider: https://github.com
+    providerKind: github
+    repositories:
+    - name: golang-new
+    scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
     kind: failureOrNextSuccess
