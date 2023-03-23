@@ -9,6 +9,7 @@ data:
       enabled:
         hazem-internship/golang-new: true
         hazem-internship/jx3-new: true
+        hazem-internship/things-board: true
         hazemTa/go-23-2032: true
     plank: {}
     pod_namespace: jx
@@ -23,6 +24,7 @@ data:
       merge_method:
         hazem-internship/golang-new: merge
         hazem-internship/jx3-new: merge
+        hazem-internship/things-board: merge
         hazemTa/go-23-2032: merge
       queries:
       - labels:
@@ -36,6 +38,7 @@ data:
         repos:
         - hazem-internship/jx3-new
         - hazem-internship/golang-new
+        - hazem-internship/things-board
         - hazemTa/go-23-2032
       - labels:
         - updatebot
@@ -48,6 +51,7 @@ data:
         repos:
         - hazem-internship/jx3-new
         - hazem-internship/golang-new
+        - hazem-internship/things-board
         - hazemTa/go-23-2032
       target_url: http://lighthouse-jx.10.0.0.100.nip.io/merge/status
 kind: ConfigMap
