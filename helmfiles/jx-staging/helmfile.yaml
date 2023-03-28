@@ -7,11 +7,5 @@ namespace: jx-staging
 repositories:
 - name: dev
   url: https://hazem-internship.github.io/gow-new-1/
-releases:
-- chart: dev/golang-new
-  version: 0.0.1
-  name: golang-new
-  values:
-  - jx-values.yaml
 templates: {}
 renderedvalues: {}
