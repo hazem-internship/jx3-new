@@ -15,6 +15,7 @@ spec:
     providerKind: github
     repositories:
     - name: golang
+    - name: jx3-new
     - name: things-board
     scheduler: in-repo
   slack:
