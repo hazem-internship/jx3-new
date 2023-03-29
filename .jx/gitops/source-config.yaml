@@ -14,7 +14,6 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
-    - name: golang
     - name: things-board
     scheduler: in-repo
   slack:
