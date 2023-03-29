@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         hazem-internship/golang: true
+        hazem-internship/golang_demo: true
         hazem-internship/jx3-new: true
         hazem-internship/things-board: true
         hazemTa/go-23-2032: true
@@ -23,6 +24,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         hazem-internship/golang: merge
+        hazem-internship/golang_demo: merge
         hazem-internship/jx3-new: merge
         hazem-internship/things-board: merge
         hazemTa/go-23-2032: merge
@@ -37,6 +39,7 @@ data:
         - needs-rebase
         repos:
         - hazem-internship/jx3-new
+        - hazem-internship/golang_demo
         - hazem-internship/golang
         - hazem-internship/things-board
         - hazemTa/go-23-2032
@@ -50,6 +53,7 @@ data:
         - needs-rebase
         repos:
         - hazem-internship/jx3-new
+        - hazem-internship/golang_demo
         - hazem-internship/golang
         - hazem-internship/things-board
         - hazemTa/go-23-2032
