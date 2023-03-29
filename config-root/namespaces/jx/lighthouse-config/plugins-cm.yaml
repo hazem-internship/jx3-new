@@ -8,6 +8,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - hazem-internship/golang_demo
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - hazem-internship/golang
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -37,6 +41,11 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      hazem-internship/golang_demo:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       hazem-internship/jx3-new:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -58,6 +67,20 @@ data:
     owners: {}
     plugins:
       hazem-internship/golang:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      hazem-internship/golang_demo:
       - approve
       - assign
       - help
@@ -125,6 +148,9 @@ data:
     triggers:
     - repos:
       - hazem-internship/jx3-new
+      trusted_org: hazem-internship
+    - repos:
+      - hazem-internship/golang_demo
       trusted_org: hazem-internship
     - repos:
       - hazem-internship/golang
